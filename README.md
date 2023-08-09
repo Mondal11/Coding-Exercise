@@ -6,18 +6,18 @@ Steps to follow for testing the Application.
 2.	The folder layout is as mentioned in the problem Statement i.e, 
 
 
-CombinedLetters
-&nbsp;<br>	Input
-&nbsp;&nbsp;&nbsp;		Admission
-&nbsp;&nbsp;&nbsp;&nbsp;			20220125
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				Admission-98765432.txt
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				Admission-09876543.txt
-&nbsp;&nbsp;&nbsp;		Scholarship
-&nbsp;&nbsp;&nbsp;&nbsp;			20220125
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				Scholarship-98765432.txt
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				Scholarship-09876543.txt
-&nbsp;	Archive
-&nbsp;	Output
+CombinedLetters<br>
+&nbsp;	Input<br>
+&nbsp;&nbsp;&nbsp;		Admission<br>
+&nbsp;&nbsp;&nbsp;&nbsp;			20220125<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				Admission-98765432.txt<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				Admission-09876543.txt<br>
+&nbsp;&nbsp;&nbsp;		Scholarship<br>
+&nbsp;&nbsp;&nbsp;&nbsp;			20220125<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				Scholarship-98765432.txt<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				Scholarship-09876543.txt<br>
+&nbsp;	Archive<br>
+&nbsp;	Output<br>
 
 
 3.	Inside the Program.cs file, the main method drives the console app's operations. Before use, make sure to update the file paths in the code to match your system's folder structure. 
