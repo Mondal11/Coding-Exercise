@@ -56,6 +56,26 @@ namespace CodingExercise
                     letterService.CombineTwoLetters(admissionFile, matchingScholarshipFile, outputFile);
                 }
             }
+
+            // Clear the contents of the Admission and Scholarship folders in Input
+            ClearFolder(inputAdmissionFolder);
+            ClearFolder(inputScholarshipFolder);
+            
+        }
+        
+        private static void ClearFolder(string folderPath)
+        {
+            DirectoryInfo directoryInfo = new DirectoryInfo(folderPath);
+
+            foreach (FileInfo file in directoryInfo.GetFiles())
+            {
+                file.Delete();
+            }
+
+            foreach (DirectoryInfo subDirectory in directoryInfo.GetDirectories())
+            {
+                subDirectory.Delete(true);
+            }
         }
     }
 }
