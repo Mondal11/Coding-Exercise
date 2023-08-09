@@ -35,6 +35,11 @@ namespace CodingExercise
             string inputAdmissionFolder = Path.Combine(rootFolder, "Input", "Admission");
             string inputScholarshipFolder = Path.Combine(rootFolder, "Input", "Scholarship");
             string outputFolder = Path.Combine(rootFolder, "Output");
+            
+            if (!Directory.Exists(outputFolder))
+            {
+                Directory.CreateDirectory(outputFolder);
+            }
 
             int totalFilesCombined = 0;
             List<string> combinedStudentIds = new List<string>();
