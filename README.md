@@ -7,7 +7,7 @@ Steps to follow for testing the Application.
 
 
 CombinedLetters
-&nbsp;	Input
+&nbsp;<br>	Input
 &nbsp;&nbsp;&nbsp;		Admission
 &nbsp;&nbsp;&nbsp;&nbsp;			20220125
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				Admission-98765432.txt
