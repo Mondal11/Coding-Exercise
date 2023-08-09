@@ -1,10 +1,21 @@
-using System;
 using System.IO;
 
 namespace CodingExercise
 {
     public class LetterService : ILetterService
     {
+        public void CombineTwoLetters(string inputFile1, string inputFile2, string resultFile)
+        {
+            // Read content from both input files
+            string content1 = File.ReadAllText(inputFile1);
+            string content2 = File.ReadAllText(inputFile2);
+        
+            // Combine content
+            string combinedContent = content1 + "\n\n" + content2;
+        
+            // Write combined content to the result file
+            File.WriteAllText(resultFile, combinedContent);
+        }
         
         public void ArchiveFiles(string rootFolder, string archiveFolder)
         {
