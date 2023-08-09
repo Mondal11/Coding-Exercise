@@ -7,17 +7,17 @@ Steps to follow for testing the Application.
 
 
 CombinedLetters<br>
-&nbsp;	Input<br>
-&nbsp;&nbsp;&nbsp;		Admission<br>
-&nbsp;&nbsp;&nbsp;&nbsp;			20220125<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				Admission-98765432.txt<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				Admission-09876543.txt<br>
-&nbsp;&nbsp;&nbsp;		Scholarship<br>
-&nbsp;&nbsp;&nbsp;&nbsp;			20220125<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				Scholarship-98765432.txt<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				Scholarship-09876543.txt<br>
-&nbsp;	Archive<br>
-&nbsp;	Output<br>
+&nbsp;&nbsp;&nbsp;&nbsp; Input <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Admission <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20220125 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Admission-98765432.txt <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Admission-09876543.txt<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		Scholarship<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			20220125<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				Scholarship-98765432.txt<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				Scholarship-09876543.txt<br>
+&nbsp;&nbsp;&nbsp;&nbsp;	Archive<br>
+&nbsp;&nbsp;&nbsp;&nbsp;	Output<br>
 
 
 3.	Inside the Program.cs file, the main method drives the console app's operations. Before use, make sure to update the file paths in the code to match your system's folder structure. 
