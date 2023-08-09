@@ -66,14 +66,24 @@ namespace CodingExercise
             ClearFolder(inputScholarshipFolder);
 
             // Save combined student IDs to a text file with the current date as the name
-            string combinedIdsFilePath = Path.Combine(rootFolder, $"{DateTime.Now:MM-dd-yyyy}") + " Report.txt";
+            string currentDate = DateTime.Now.ToString("MM-dd-yyyy");
+            string fileNameBase = $"{currentDate} Report.txt";
+            string combinedIdsFilePath = Path.Combine(rootFolder, fileNameBase);
 
-            
+            // If a file with the same name already exists, append a number to make it unique
+            int counter = 1;
+            while (File.Exists(combinedIdsFilePath))
+            {
+                string numberedFileName = $"{currentDate} Report ({counter}).txt";
+                combinedIdsFilePath = Path.Combine(rootFolder, numberedFileName);
+                counter++;
+            }
+
+            // Write the content to the file
             File.WriteAllText(combinedIdsFilePath, $"{DateTime.Now:MM/dd/yyyy}" + " Report\n");
             File.AppendAllText(combinedIdsFilePath, $"-----------------------------\n\n");
             File.AppendAllText(combinedIdsFilePath, $"Number of Combined Letters: {totalFilesCombined}\n\n");
             File.AppendAllLines(combinedIdsFilePath, combinedStudentIds);
-            
         }
         
         
