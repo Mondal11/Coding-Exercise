@@ -4,8 +4,15 @@ using System.IO;
 
 namespace CodingExercise
 {
-    class Program: LetterService
+    /// <summary>
+    /// Contains the entry point and logic for the console application.
+    /// </summary>
+    class Program
     {
+        /// <summary>
+        /// Entry point of the console application.
+        /// </summary>
+        /// <param name="args">Command-line arguments (not used in our case).</param>
         public static void Main(string[] args)
         {
             string inputRootFolder = @"/Users/suman/Desktop/Coding Challenge/CombinedLetters/Input";
@@ -18,6 +25,11 @@ namespace CodingExercise
             MergeAndStoreLetters(rootFolder, letterService);
         }
         
+        /// <summary>
+        /// Merges admission and scholarship letters for the same student and generates a report.
+        /// </summary>
+        /// <param name="rootFolder">The root folder containing input, archive, and output folders.</param>
+        /// <param name="letterService">An instance of the ILetterService interface.</param>
         private static void MergeAndStoreLetters(string rootFolder, ILetterService letterService)
         {
             string inputAdmissionFolder = Path.Combine(rootFolder, "Input", "Admission");
@@ -36,7 +48,7 @@ namespace CodingExercise
 
                 if (!Directory.Exists(matchingScholarshipFolder))
                 {
-                    continue; // No matching scholarship folder found for this date
+                    continue;
                 }
 
                 string[] admissionFiles = Directory.GetFiles(admissionDatedFolder, "admission-*.txt");
@@ -50,7 +62,7 @@ namespace CodingExercise
 
                     if (!File.Exists(matchingScholarshipFile))
                     {
-                        continue; // No matching scholarship file found for this student ID
+                        continue;
                     }
 
                     string outputFile = Path.Combine(outputFolder, $"{studentId}.txt");
@@ -60,17 +72,15 @@ namespace CodingExercise
                     totalFilesCombined++;
                 }
             }
-
-            // Clear the contents of the Admission and Scholarship folders in Input
+            
             ClearFolder(inputAdmissionFolder);
             ClearFolder(inputScholarshipFolder);
-
-            // Save combined student IDs to a text file with the current date as the name
+            
             string currentDate = DateTime.Now.ToString("MM-dd-yyyy");
             string fileNameBase = $"{currentDate} Report.txt";
             string combinedIdsFilePath = Path.Combine(rootFolder, fileNameBase);
 
-            // If a file with the same name already exists, append a number to make it unique
+            
             int counter = 1;
             while (File.Exists(combinedIdsFilePath))
             {
@@ -78,30 +88,29 @@ namespace CodingExercise
                 combinedIdsFilePath = Path.Combine(rootFolder, numberedFileName);
                 counter++;
             }
-
-            // Write the content to the file
+            
             File.WriteAllText(combinedIdsFilePath, $"{DateTime.Now:MM/dd/yyyy}" + " Report\n");
             File.AppendAllText(combinedIdsFilePath, $"-----------------------------\n\n");
             File.AppendAllText(combinedIdsFilePath, $"Number of Combined Letters: {totalFilesCombined}\n\n");
             File.AppendAllLines(combinedIdsFilePath, combinedStudentIds);
         }
         
-        
+        /// <summary>
+        /// Clears the contents of a specified folder by deleting all files and subdirectories.
+        /// </summary>
+        /// <param name="folderPath">The path of the folder to be cleared.</param>
         private static void ClearFolder(string folderPath)
         {
             DirectoryInfo directoryInfo = new DirectoryInfo(folderPath);
-
             foreach (FileInfo file in directoryInfo.GetFiles())
             {
                 file.Delete();
             }
-
             foreach (DirectoryInfo subDirectory in directoryInfo.GetDirectories())
             {
                 subDirectory.Delete(true);
             }
         }
-
     }
 }
 
