@@ -45,6 +45,23 @@
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>
+    <ItemGroup>
+      <Content Include="CombinedLetters\.DS_Store" />
+      <Content Include="CombinedLetters\Archive\.DS_Store" />
+      <Content Include="CombinedLetters\Input\.DS_Store" />
+      <Content Include="CombinedLetters\Input\Admission\.DS_Store" />
+      <Content Include="CombinedLetters\Input\Admission\20220125\.DS_Store" />
+      <Content Include="CombinedLetters\Input\Admission\20220125\admission-98765432.txt" />
+      <Content Include="CombinedLetters\Input\Admission\20220125\admission-98765433.txt" />
+      <Content Include="CombinedLetters\Input\Admission\20220125\admission-98765434.txt" />
+      <Content Include="CombinedLetters\Input\Admission\20220125\admission-98765435.txt" />
+      <Content Include="CombinedLetters\Input\Scholarship\.DS_Store" />
+      <Content Include="CombinedLetters\Input\Scholarship\20220125\scholarship-98765432.txt" />
+      <Content Include="CombinedLetters\Input\Scholarship\20220125\scholarship-98765433.txt" />
+      <Content Include="CombinedLetters\Input\Scholarship\20220125\scholarship-98765434.txt" />
+      <Content Include="CombinedLetters\Input\Scholarship\20220125\scholarship-98765435.txt" />
+      <Content Include="CombinedLetters\Output\.DS_Store" />
+    </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
          Other similar extension points exist, see Microsoft.Common.targets.
